@@ -46,7 +46,6 @@ const sentenceStems = [
 ]
 
 const sentenceIndex = db.randomSentenceSelector();
-console.log(indexes)
 const randomSentence = sentenceStems[sentenceIndex]
 
 console.log(randomSentence);
