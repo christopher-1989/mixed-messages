@@ -10,7 +10,7 @@ The output is in the form of a non-sensical joke randomly selected from a databa
 
 This project uses Node.js v12.18.4
 
-## Further word
+## Further work
 
 Since interpolation inside of the object wasn't working the code had to be refactored.
 This included moving the sentenceStems to be a new variable instead of a component of the db object.
