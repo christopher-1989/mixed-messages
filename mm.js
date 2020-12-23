@@ -45,7 +45,6 @@ const sentenceStems = [
         `In M. Night Shyamalan's new movie, Bruce Willis discovers that ${word1} had really been ${word2} all along.`
 ]
 
-
 const sentenceIndex = db.randomSentenceSelector();
 console.log(indexes)
 const randomSentence = sentenceStems[sentenceIndex]
