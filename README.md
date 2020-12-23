@@ -17,3 +17,7 @@ This included moving the sentenceStems to be a new variable instead of a compone
 The code could be further refactored to have the random Sentence selector outside of the db object.
 
 Additionally a test file could be developed to check the fringe cases specifically and generally monitor the performance of the program is it is refactored.
+
+## Scripts
+
+To run this program type "node mm.js" in the root directory.
