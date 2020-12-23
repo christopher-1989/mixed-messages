@@ -1,15 +1,4 @@
-
 db = {
-    word1: "", 
-    word2: "",
-    sentenceStems: [
-        `For my next trick, I will pull ${this.word1} out of ${this.word2}.`,
-        `I never truly understood ${this.word1} until I encountered ${this.word2}.`,
-        `${this.word1} is a slippery slope that leads to ${this.word2}.`,
-        `Michael Bay's new three-hour action epic pits ${this.word1} against ${this.word2}.`,
-        `They said we were crazy. They said we couldn't put ${this.word1} inside of ${this.word2}. They were wrong.`,
-        `In M. Night Shyamalan's new movie, Bruce Willis discovers that ${this.word1} had really been ${this.word2} all along.`
-    ],
     keywords: [
         "my soul",
         "BATMAN",
@@ -24,7 +13,43 @@ db = {
         "white privilege",
         "Ghandi",
         "a brain tumour"
-    ]
+    ],
+    randomIndexGenerator () {
+        const randomIndex1 = Math.floor(Math.random() * this.keywords.length)
+        let randomIndex2 = Math.floor(Math.random() * this.keywords.length)
+        if (randomIndex1 !== randomIndex2) {
+            return [randomIndex1, randomIndex2]
+        } else {
+            while (randomIndex1 === randomIndex2) {
+                randomIndex2 = Math.floor(Math.random() * this.keywords.length)
+            }
+            return [randomIndex1, randomIndex2]
+        }
+    },
+    randomSentenceSelector () {
+        const randomSentenceIndex = Math.floor(Math.random() * sentenceStems.length);
+        return randomSentenceIndex
+    }
 }
 
-console.log(db.keywords)
+const indexes = db.randomIndexGenerator();
+const word1 = db.keywords[indexes[0]]
+const word2 = db.keywords[indexes[1]]
+
+const sentenceStems = [
+        `For my next trick, I will pull ${word1} out of ${word2}.`,
+        `I never truly understood ${word1} until I encountered ${word2}.`,
+        `${word1} is a slippery slope that leads to ${word2}.`,
+        `Michael Bay's new three-hour action epic pits ${word1} against ${word2}.`,
+        `They said we were crazy. They said we couldn't put ${word1} inside of ${word2}. They were wrong.`,
+        `In M. Night Shyamalan's new movie, Bruce Willis discovers that ${word1} had really been ${this.word2} all along.`
+]
+
+
+const sentenceIndex = db.randomSentenceSelector();
+// console.log(db.word1)
+const randomSentence = sentenceStems[sentenceIndex]
+
+console.log(randomSentence);
+
+
