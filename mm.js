@@ -42,12 +42,12 @@ const sentenceStems = [
         `${word1} is a slippery slope that leads to ${word2}.`,
         `Michael Bay's new three-hour action epic pits ${word1} against ${word2}.`,
         `They said we were crazy. They said we couldn't put ${word1} inside of ${word2}. They were wrong.`,
-        `In M. Night Shyamalan's new movie, Bruce Willis discovers that ${word1} had really been ${this.word2} all along.`
+        `In M. Night Shyamalan's new movie, Bruce Willis discovers that ${word1} had really been ${word2} all along.`
 ]
 
 
 const sentenceIndex = db.randomSentenceSelector();
-// console.log(db.word1)
+console.log(indexes)
 const randomSentence = sentenceStems[sentenceIndex]
 
 console.log(randomSentence);
